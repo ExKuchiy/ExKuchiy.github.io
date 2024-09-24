@@ -61,8 +61,8 @@ button {
 #progresso::-webkit-slider-thumb { cursor: pointer; }
 #clica {
     text-align: center;
-    border: 5px solid olive;
-    background-color: olive;
+    border: 5px solid black;
+    background-color: transparent;
     border-radius: 5px;
     height: 20px;
     width: 296px;
@@ -70,8 +70,7 @@ button {
 }
 #clica:hover {
     transform: none;
-    border-color: rgba(128, 128, 0, 0.1);
-    background-color: rgba(128, 128, 0, 0.6)
+    border-color: rgba(0, 0, 0, 0.6);
 }
 #log {
     border: 3px solid ghostwhite;
