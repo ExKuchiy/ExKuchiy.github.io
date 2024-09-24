@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    margin: 0;
+    background-color: lightgray;
+    margin-top: 130px;
+}
+li { 
+    list-style: none; 
+    margin-bottom: 20px;
+    width: 300px;
+}
+li a {
+    text-decoration: none;
+    color: white;
+}
+a div {
+    width: 300px;
+    text-align: center;
+    border: 3px solid black;
+    transition: transform 0.2s;
+    background-color: black;
+    border-radius: 7px;
+}
+a div:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.video {
+    margin-left: 300px;
+    margin-top: 50px;
+}
+#shrek { height: 500px; }
+button { 
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#barra-volume {
+    position: relative;
+    display: inline-block;
+    left: 12px;
+}
+#barra-volume:hover { background-color: transparent; }
+#volImg {
+    cursor: pointer;
+    width: 30px;
+}
+#volume {
+    position: absolute;
+    right: -10px;
+    bottom: 95px;
+    transform: rotate(-90deg);
+    transform-origin: right;
+    width: 100px;
+    height: 10px;
+    display: none;
+}
+#volume::-webkit-slider-thumb { cursor: pointer; }
+#barra-volume:hover #volume { display: block; }
+#progresso { width: 80%; }
+#progresso::-webkit-slider-thumb { cursor: pointer; }
+#clica {
+    text-align: center;
+    border: 5px solid olive;
+    background-color: olive;
+    border-radius: 5px;
+    height: 20px;
+    width: 296px;
+    cursor: pointer;
+}
+#clica:hover {
+    transform: none;
+    border-color: rgba(128, 128, 0, 0.1);
+    background-color: rgba(128, 128, 0, 0.6)
+}
+#log {
+    border: 3px solid ghostwhite;
+    border-radius: 50px;
+    background-color: lightgray;
+    text-align: center;
+    width: 300px;
+}
+.cromas {
+    margin-top: 50px;
+    margin-left: 25px;
+    background-image: url('/cromatico.gif');
+    width: 250px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 500px;
+}

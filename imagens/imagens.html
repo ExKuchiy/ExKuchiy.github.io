@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 2</title>
+    <style>
+        #principal {
+            position: absolute;
+            height: 200px;
+            clip: rect(0 200px 200px 0);
+        }
+        #janela {
+            position: relative;
+            height: 200px;
+            top: 0;
+            left: 0;
+        }
+        #janela img { 
+            width: 200px;
+            height: 200px;
+        }
+        #info {
+            position: absolute;
+            top: 300px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        var limite;
+        function moverFotos() {
+            $('#janela').animate({left:"-=200"}, 1000, function(e) {
+                $('#info').html($('#janela').position().left);
+                if ($('#janela').position().left == limite) {
+                    $('#janela').css('left', 0);
+                }
+            });
+        }
+        $(function(e) {
+            limite = $('#janela img').length * $('#janela img').width() * -1;
+            $('#janela').append('<img>');
+            $('#janela img:last').attr('src', 'raios.png');
+            setInterval(moverFotos, 2000);
+        });
+    </script>
+</head>
+<body>
+    <div id="principal">
+        <div id="janela">
+            <img src="destruição.png">
+            <img src="resistência.png">
+            <img src="rosas.png">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    color: white;
+}
+
+#logo {
+    width: 150px;
+    margin-left: 20px;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
+.menu a:hover {
+    color: gold;
+}
+
+.container {
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h3 span {
+    color: #d40000;
+}
+
+h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #08201E;
+}
+
+img {
+    width: 1000px;
+}
+
+p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.btns {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 72px;
+}
+
+.btns a {
+    padding: 15px 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(8, 32, 30, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.btns a:hover {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    background-color:rgba(87, 0, 0, 0.6);
+}

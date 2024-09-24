@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <style>
+        #janela {
+            margin-top: 100px;
+            margin-left: 100px;
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: ghostwhite;
+            background-image: url(nefario.gif);
+            background-size: 100% 100%;
+            border-radius: 500px;
+            transform-origin: center;
+            box-shadow: 0px 0px 10px 15px crimson, 0px 0px 15px 30px orangered, 0px 0px 10px 40px yellow;
+        }
+        input { 
+            cursor: pointer;
+            display: flex; 
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        function girarDiv(angulo) {
+            $('#janela').css({
+                transform: 'rotate(' + angulo + 'deg)'
+            });
+        }
+        function iniciarRotacao() {
+            let angulo = 0;
+            function rotacionar() {
+                angulo += 2;
+                girarDiv(angulo);
+                requestAnimationFrame(rotacionar);
+            }
+            rotacionar();
+        }
+        $(function() {
+            iniciarRotacao();
+        });
+
+        function moverObjetoE() {
+            $('#janela').animate({left:'-=300'}, 1000);
+        }
+        function moverObjetoD() {
+            $('#janela').animate({left:'+=300'}, 1000);
+        }
+        function moverObjetoC() {
+            $('#janela').animate({top:'-=300'}, 1000);
+        }
+        function moverObjetoB() {
+            $('#janela').animate({top:'+=300'}, 1000);
+        }
+        $(function() {
+            $('#esquerda').click(moverObjetoE);
+            $('#direita').click(moverObjetoD);
+            $('#cima').click(moverObjetoC);
+            $('#baixo').click(moverObjetoB);
+        })
+    </script>
+</head>
+<body>
+    <input type="button" id="esquerda" value="Mover para Esquerda">
+    <input type="button" id="direita" value="Mover para Direita">
+    <input type="button" id="cima" value="Mover para Cima">
+    <input type="button" id="baixo" value="Mover para Baixo">
+    <div id="janela"></div>
+</body>
+</html>
