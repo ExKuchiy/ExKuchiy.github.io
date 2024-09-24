@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title target="_blank">Página Inicial</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="om.ico" type="image/x-icon">
+        <link rel="stylesheet" href="arquivosTelaInicial/estiloTelaInicial.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.video').hide();
+                $('#clica').click(function() {
+                    $('.video').slideToggle("slow");
+                    $('.cromas').slideToggle("slow")
+                });
+            });
+            $(document).on('mousemove', function(event) {
+                $('#log').text('X: ' + event.pageX + ', Y: ' + event.pageY)
+            });
+            function girarDiv(angulo) {
+                $('.cromas').css({
+                    transform: 'rotate(' + angulo + 'deg)'
+                });
+            };
+            function iniciarRotacao() {
+                let angulo = 0;
+                function rotacionar() {
+                    angulo += 10;
+                    girarDiv(angulo);
+                    requestAnimationFrame(rotacionar);
+                }
+                rotacionar();
+            };
+            $(function() {
+                iniciarRotacao();
+            });
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li><a href="pagina1.html" target="_blank"><div>Página Primordial</div></a></li>
+            <li><a href="pagina2.html" target="_blank"><div>Página Com Cores e Tamanhos</div></a></li>
+            <li><a href="pagina3.html" target="_blank"><div>Página Com Estilos de Borda</div></a></li>
+            <li><a href="pagina4.html" target="_blank"><div>Página Com Margem</div></a></li>
+            <li><a href="pagina5.html" target="_blank"><div>Página Com Padding</div></a></li>
+            <li><a href="pagina6.html" target="_blank"><div>Página Com Formatações</div></a></li>
+            <li><a href="pagina7.html" target="_blank"><div>Página Com Listas</div></a></li>
+            <li><a href="pagina8.html" target="_blank"><div>Página Sobre Frutas</div></a></li>
+            <li><a href="restaurante.html" target="_blank"><div>Página Com Review de Restaurante</div></a></li>
+            <li><a href="inscrição.html" target="_blank"><div>Página Com Inscrição de Concurso</div></a></li>
+            <li><a href="medalhas.html" target="_blank"><div>Página Com Medalhas</div></a></li>
+            <li><a href="emelis/é o ringas.html" target="_blank"><div>Página Sobre Elden Ring</div></a></li>
+            <li><a href="carrinho de compras/html.html" target="_blank"><div>Página Com Carrinho de Compras</div></a></li>
+            <li><a href="quadrado.html" target="_blank"><div>Página Com Quadrado</div></a></li>
+            <li><a href="imagens/imagens.html" target="_blank"><div>Página Com Carrosel de imagens</div></a></li>
+            <li><div id="clica">SHREK</div></li>
+            <li><div id="log"></div></li>
+        </ul>
+        <figure class="video">
+            <video id="shrek" src="arquivosTelaInicial/shrek.mp4"></video>
+            <figcaption>
+                <button id="play/pause"><img src="arquivosTelaInicial/play.png" id="playImg" width="30px" height="30px"></button>
+                <input type="range" id="progresso" value="0" min="0" max="100" step="0.1">
+                <span id="duracao">00:00 / 00:00</span>
+                <div id="barra-volume">
+                    <img id="volImg" src="arquivosTelaInicial/volume.png" width="30px">
+                    <input type="range" id="volume" value="100" min="0" max="100" step="1">
+                </div>
+            </figcaption>
+        </figure>
+        <div class="cromas"></div>
+      <script src="arquivosTelaInicial/visdeo.js"></script>
+    </body>
+</html>
